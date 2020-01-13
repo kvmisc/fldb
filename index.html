@@ -9,14 +9,14 @@
 <body>
 <script type="text/javascript">
 
-    var Web3 = require('web3');
-    const web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"))
-    console.log(web3)
+  var Web3 = require('web3');
+  const web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"))
+  console.log(web3)
 
-    //web3.eth.getAccounts().then(console.log)
-    var coinbase = web3.eth.coinbase;
-    console.log(coinbase)
-    console.log(web3.eth.accounts)
+  var coinbase = web3.eth.coinbase;
+  console.log(coinbase)
+
+  console.log(web3.eth.accounts)
 
 </script>
 </body>
