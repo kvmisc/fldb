@@ -1,0 +1,9 @@
+web3.eth.getAccounts(function(err, acc) {
+    _.each(acc, function(e) {
+      web3.eth.getBalance(e, function (error, result) {
+        if (!error) {
+          console.log(e + ': ' + result);
+        };
+      });
+    });
+  });
