@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ethereum Test</title>
+<script type="text/javascript" src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+<script type="text/javascript" src="https://unpkg.com/web3@0.20.5/dist/web3.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+  var Web3 = require('web3');
+  web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/d10444a39d524e3a9567c81ad333070a"));
+  console.log(web3);
+
+  //var addr = '0xD2E85464C5Ad682161b2df85249204D6F00142e9'
+  var addr = '0x07D50c70893030529A82964a3F15443B9FDf0687'
+  web3.eth.getBalance(addr, 'latest', function (error, result) {
+    if (!error)
+      console.log(JSON.stringify(result));
+    else
+      console.error(error);
+  });
+
+</script>
+</body>
+</html>
