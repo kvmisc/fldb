@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Ethereum Test</title>
   <script type="text/javascript" src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
-  <script type="text/javascript" src="https://unpkg.com/web3@0.20.5/dist/web3.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/web3@0.20.5/dist/web3.js"></script>
 </head>
 
 <body>
@@ -30,7 +30,11 @@
     var contract = web3.eth.contract(contract_abi).at(contract_addr)
     console.log(contract)
 
-    contract.name(function (error, result) {
+    // contract.name(function (error, result) {
+    //   console.log(result)
+    // })
+
+    contract.name.call(function (error, result) {
       console.log(result)
     })
 
