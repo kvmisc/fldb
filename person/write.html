@@ -12,33 +12,32 @@
   <script type="text/javascript">
 
     var Web3 = require('web3');
-    if (typeof web3 !== 'undefined') {
-      web3 = new Web3(web3.currentProvider);
-      console.log('default provider');
-    } else {
-      // Set the provider you want from Web3.providers
-      //web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
-      web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/d10444a39d524e3a9567c81ad333070a"));
-      console.log('custom provider');
-    }
+    // if (typeof web3 !== 'undefined') {
+    //   web3 = new Web3(web3.currentProvider);
+    //   console.log('default provider');
+    // } else {
+    //   // Set the provider you want from Web3.providers
+    //   //web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
+    //   web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/d10444a39d524e3a9567c81ad333070a"));
+    //   console.log('custom provider');
+    // }
     //web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
-    //web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/d10444a39d524e3a9567c81ad333070a"));
+    web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/d10444a39d524e3a9567c81ad333070a"));
     console.log(web3);
 
     //web3.eth.defaultAccount = '0xD2E85464C5Ad682161b2df85249204D6F00142e9'
 
-    //console.log(web3.eth.defaultAccount)
-    //console.log(web3.eth.accounts)
-
+    //console.log(web3.eth.defaultAccount);
+    //console.log(web3.eth.accounts);
     web3.eth.getAccounts(function (error, result) {
-      console.log(result)
+      console.log(result);
     });
 
-    var contract_abi = [{ "inputs": [{ "internalType": "string", "name": "value", "type": "string" }], "payable": false, "stateMutability": "nonpayable", "type": "constructor" }, { "constant": false, "inputs": [{ "internalType": "string", "name": "value", "type": "string" }], "name": "updateName", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [], "name": "name", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "payable": false, "stateMutability": "view", "type": "function" }]
-    var contract_addr = '0xAa2bC25742e9bA4D7dB98c70178ddB30461193aC'
+    var contract_abi = [{ "inputs": [{ "internalType": "string", "name": "value", "type": "string" }], "payable": false, "stateMutability": "nonpayable", "type": "constructor" }, { "constant": false, "inputs": [{ "internalType": "string", "name": "value", "type": "string" }], "name": "updateName", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [], "name": "name", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "payable": false, "stateMutability": "view", "type": "function" }];
+    var contract_addr = '0xAa2bC25742e9bA4D7dB98c70178ddB30461193aC';
 
-    var contract = web3.eth.contract(contract_abi).at(contract_addr)
-    console.log(contract)
+    var contract = web3.eth.contract(contract_abi).at(contract_addr);
+    console.log(contract);
 
     var txn = {
       from: '0xD2E85464C5Ad682161b2df85249204D6F00142e9',
