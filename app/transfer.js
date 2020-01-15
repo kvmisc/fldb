@@ -43,5 +43,5 @@ web3.eth.getTransactionCount(public_key_1, (error, txCount) => {
     console.log('txHash: ', txHash)
   })
 
-});
+})
 
