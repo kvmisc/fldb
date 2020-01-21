@@ -23,7 +23,7 @@ var contract_addr = '0xAa2bC25742e9bA4D7dB98c70178ddB30461193aC'
 var contract = new web3.eth.Contract(contract_abi, contract_addr)
 //console.log(contract)
 
-var data = contract.methods.updateName('yb').encodeABI()
+var data = contract.methods.updateName('aa').encodeABI()
 //console.log(data)
 
 web3.eth.getTransactionCount(public_key_1, (error, txCount) => {
