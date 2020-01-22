@@ -7,7 +7,7 @@ var Tx = require('ethereumjs-tx').Transaction
 // global values
 
 // web3
-web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/d10444a39d524e3a9567c81ad333070a"))
+var web3 = new Web3('https://ropsten.infura.io/v3/d10444a39d524e3a9567c81ad333070a')
 
 // wallet
 var addr_1 = '0x07d50c70893030529a82964a3f15443b9fdf0687'
@@ -26,14 +26,8 @@ var contract = new web3.eth.Contract(contract_abi, contract_addr)
 console.log('body begin')
 
 
-// var rawTx = {
-//   to: contract_addr,
-//   data: contract.methods.updateName('ab').encodeABI()
-// }
-// console.log(rawTx)
+web3.eth.accounts.create()
 
-// web3.eth.estimateGas(rawTx)
-// .then(console.log)
 
 console.log('body end')
 // body end
