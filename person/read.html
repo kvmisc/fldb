@@ -33,6 +33,14 @@
     contract.name(function (error, result) {
       console.log(result);
     });
+
+  //   var contract_abi = [{ "constant": false, "inputs": [], "name": "getCompanys", "outputs": [{ "name": "", "type": "string" }], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [{ "name": "o", "type": "string" }, { "name": "n", "type": "string" }], "name": "updateCompany", "outputs": [{ "name": "", "type": "bool" }], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [{ "name": "v", "type": "string" }], "name": "addCompany", "outputs": [{ "name": "", "type": "bool" }], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [], "name": "getCompanyCount", "outputs": [{ "name": "", "type": "uint256" }], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [{ "name": "v", "type": "string" }], "name": "removeCompany", "outputs": [{ "name": "", "type": "bool" }], "payable": false, "stateMutability": "nonpayable", "type": "function" }]
+  //     var contract_addr = '0x19c6346af3807fb6ed161850d58296948aabe61d'
+  //     var contract = web3.eth.contract(contract_abi).at(contract_addr)
+  // contract.getCompanyCount(function (error, result) {
+  //   console.log(result.toString())
+  // })
+
     // contract.name.call(function (error, result) {
     //   console.log(result);
     // });
