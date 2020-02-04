@@ -26,7 +26,6 @@ use Web3\Contract;
 $contract_abi = '[{"constant":false,"inputs":[{"name":"mid","type":"uint256"},{"name":"timestamp","type":"uint256"},{"name":"coordination","type":"uint256"}],"name":"createCoordination","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"mid","type":"uint256"},{"name":"timestamp","type":"uint256"},{"name":"index","type":"uint256"}],"name":"deleteCoordination","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"mid","type":"uint256"},{"name":"timestamp","type":"uint256"},{"name":"coordination","type":"uint256"},{"name":"index","type":"uint256"}],"name":"updateCoordination","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"mid","type":"uint256"},{"name":"timestamp","type":"uint256"},{"name":"index","type":"uint256"}],"name":"readCoordination","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}]';
 $contract_addr = '0x740863737963b7a6ddc63c86ad2c88c7b3c8a1a2';
 $contract = new Contract($provider, $contract_abi);
-
 $contract->at($contract_addr)->call('readCoordination', 1,2,0, function ($err, $res) {
     if ($err !== null) {
         echo 'Error: ' . $err->getMessage();
