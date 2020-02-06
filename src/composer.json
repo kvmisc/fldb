@@ -2,6 +2,6 @@
   "minimum-stability": "dev",
   "require": {
     "sc0vu/web3.php": "dev-master",
-    "web3p/ethereum-tx": "*"
+    "web3p/ethereum-tx": "dev-master"
   }
 }
